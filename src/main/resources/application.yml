@@ -3,5 +3,16 @@ quarkus:
     host: 0.0.0.0
     port: 8081
 
+  native:
+    resources:
+      includes: src/main/local/publicKey.pem
+
+mp:
+  jwt:
+    verify:
+      publickey:
+        location: src/main/local/publicKey.pem
+        issuer: https://demo.fugerit.org
+
 greeting:
   message: "hello"

@@ -15,6 +15,8 @@
     <quarkus.platform.version>3.8.3</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.2.5</surefire-plugin.version>
+    <fj-service-helper-version>0.3.1</fj-service-helper-version>
+    <lombok-version>1.18.32</lombok-version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -22,6 +24,13 @@
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>${quarkus.platform.artifact-id}</artifactId>
         <version>${quarkus.platform.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.fugerit.java</groupId>
+        <artifactId>fj-service-helper-bom</artifactId>
+        <version>${fj-service-helper-version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -52,6 +61,20 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-reactive</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-openapi</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.fugerit.java</groupId>
+      <artifactId>emp-service-model</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok-version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
