@@ -11,3 +11,7 @@ Quarkus Demo JWT Consumer
 -Dextensions='resteasy-reactive-jackson,quarkus-arc,quarkus-config-yaml,junit5,smallrye-jwt'
 ```
 
+## Quickstart
+
+See project
+<https://github.com/fugerit-sec/quarkus-demo-jwt-producer>
